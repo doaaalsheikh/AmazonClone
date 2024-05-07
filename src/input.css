@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		@apply box-border p-0 m-0;
+	}
+	/* a {
+		@apply hover:underline hover:text-amazonYellow;
+	} */
+}
+
+@layer components {
+	.after-icon {
+		@apply after:font-FontAwsome after:absolute after:flex after:items-center after:w-full after:h-full after:pointer-events-none;
+	}
+	/* .search-icon-position::after {
+		left: calc(100% - 20px);
+	} */
+	.side-menu-container {
+		left: calc(-50% - 50px);
+	}
+	.side-menu i {
+		@apply text-zinc-400 text-[1rem];
+	}
+	.side-menu ul li:hover .right-angle-icon {
+		@apply -left-[160px];
+	}
+	.side-menu ul li > div {
+		@apply flex justify-between cursor-pointer;
+	}
+	.sub-menu {
+		left: calc(100% + 100px);
+	}
+	.white-border {
+		@apply border border-transparent hover:border-white;
+	}
+	.lang-choices input[type="radio"] {
+		@apply hidden appearance-none;
+	}
+	.lang-choices input + div::before {
+		@apply content-[""] absolute w-4 h-4 rounded-full border border-zinc-600 -left-6;
+	}
+	.lang-choices input:checked + div::after,
+	.lang-choices label:hover div::after {
+		@apply content-[""] absolute w-2 h-2 rounded-full bg-amazonYellow -left-5 top-1;
+	}
+	.region-menu a,
+	.sign-in-menu a:not(.sign-in-menu > div > a),
+	section > * > a {
+		@apply hover:underline hover:text-orange-600;
+	}
+	.current {
+		@apply left-0 w-screen;
+	}
+	.previous {
+		@apply -left-full w-screen;
+	}
+	.next {
+		@apply left-full w-screen;
+	}
+
+	/* Custom scrollbar styles */
+	.custom-scrollbar::-webkit-scrollbar {
+		@apply h-0;
+	}
+
+	.custom-scrollbar::-webkit-scrollbar-track {
+		@apply bg-white;
+	}
+	.custom-scrollbar::-webkit-scrollbar-thumb {
+		@apply bg-zinc-400 rounded-xl h-[6px];
+	}
+
+	.custom-scrollbar:hover::-webkit-scrollbar {
+		@apply h-[6px];
+	}
+	.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+		@apply bg-zinc-500;
+	}
+
+	.custom-scrollbar:hover .slide-icon-container {
+		@apply opacity-80;
+	}
+}

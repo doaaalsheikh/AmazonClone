@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html class="text-base" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Amazon</title>
+		<link href="https://fonts.cdnfonts.com/css/amazon-ember" rel="stylesheet" />
+		<link rel="stylesheet" href="../dist/output.css" />
+	</head>
+	<body class="font-AmazonEmber bg-[#e3e6e6]">
+		<header class="min-w-[1000px]">
+			<!-- <div class="min-w-[1000px]"> -->
+			<div
+				class="overlay absolute w-full h-full bg-black opacity-0 z-[-1]"
+			></div>
+			<!-- START SIDE MENU -->
+			<div
+				class="side-menu-container w-0 text-amazonLight bg-white h-full absolute transition-all duration-500 linear z-[150] overflow-hidden"
+			>
+				<div
+					class="menu-header flex items-center gap-2 py-3 px-8 bg-amazonLight text-white text-lg font-bold"
+				>
+					<div
+						class="user-icon w-6 h-6 rounded-full bg-white bg-amazonImage bg-no-repeat bg-user-icon-position white-border cursor-pointer flex justify-center items-center"
+					></div>
+					<span>Hello, sign in</span>
+				</div>
+				<div class="side-menu relative w-[350px] h-full flex">
+					<div
+						class="main-menu absolute transition-all duration-300 ease-linear w-[350px] py-3"
+					></div>
+					<div
+						class="sub-menu absolute transition-all duration-300 ease-linear w-[350px] py-3"
+					></div>
+				</div>
+			</div>
+
+			<div
+				class="close absolute w-[56px] h-[50px] flex justify-center items-center top-0 left-[350px] text-white"
+			>
+				<div
+					class="close-icon h-6 w-6 bg-amazonImage bg-no-repeat bg-close-icon-position cursor-pointer"
+				></div>
+			</div>
+
+			<!-- END SIDE MENU -->
+			<div
+				class="nav-top flex flex-wrap items-center py-1 bg-amazonBlue relative"
+			>
+				<!-- Logo -->
+				<a href="#">
+					<div
+						class="logo h-[52px] w-[110px] py-2 bg-amazonBlue bg-amazonImage bg-no-repeat bg-logo-position white-border"
+					></div>
+				</a>
+				<!-- Deliver -->
+				<div
+					class="deliver flex gap-1 items-end h-[52px] p-2 text-white white-border cursor-pointer"
+				>
+					<div
+						class="location-icon h-5 w-4 bg-amazonBlue bg-amazonImage bg-no-repeat bg-location-position cursor-pointer"
+					></div>
+					<div class="flex flex-col gap-[2px] justify-end leading-3">
+						<span class="text-xs text-lightText">Deliver To</span>
+						<span class="text-[14px] font-bold" id="location"
+							>Saudi Arabia</span
+						>
+					</div>
+				</div>
+
+				<!-- Search -->
+				<div
+					class="search-form flex justify-center text-zinc-700 border-lightText rounded-md h-10 min-w-[250px] mx-1 flex-1"
+				>
+					<form action="#" class="flex h-full w-full">
+						<div
+							class="select-container relative flex w-fit after-icon after:content-[''] after:border-transparent after:border-t-zinc-600 after:border-4 after:w-0 after:h-0 after:right-2 after:top-1/2 text-xs"
+						>
+							<select
+								name="search-ddl"
+								id="search-ddl"
+								class="h-full w-fit border-r border-r-lightText outline-none appearance-none rounded-s-md bg-zinc-200 py-2 pl-3 hover:bg-zinc-300 focus-within:outline-2 focus-within:outline-offset-0 focus-within:outline-amber-400 cursor-pointer"
+							>
+								<option selected="selected" value="search-all">
+									All Departments
+								</option>
+								<option value="search-arts-crafts">Arts & Crafts</option>
+								<option value="search-automotive">Automotive</option>
+								<option value="search-baby">Baby</option>
+								<option value="search-">Beauty & Personal Care</option>
+								<option value="search-books">Books</option>
+								<option value="search-boys-fashion">Boys' Fashion</option>
+								<option value="search-computers">Computers</option>
+								<option value="search-deals">Deals</option>
+								<option value="search-digital-music">Digital Music</option>
+								<option value="search-electronics">Electronics</option>
+								<option value="search-girls-fashion">Girls' Fashion</option>
+								<option value="search-health-household">
+									Health & Household
+								</option>
+								<option value="search-home-kitchen">Home & Kitchen</option>
+								<option value="search-industrial-scientific">
+									Industrial & Scientific
+								</option>
+								<option value="search-kindle-store">Kindle Store</option>
+								<option value="search-luggage">Luggage</option>
+								<option value="search-men-fashion">Men's Fashion</option>
+								<option value="search-movies-tv">Movies & TV</option>
+								<option value="search-music-cd-vinyl">
+									Music, CDs & Vinyl
+								</option>
+								<option value="search-pet-supplies">Pet Supplies</option>
+								<option value="search-prime-video">Prime Video</option>
+								<option value="search-software">Software</option>
+								<option value="search-sports-outdoors">
+									Sports & Outdoors
+								</option>
+								<option value="search-tools-home-improvement">
+									Tools & Home Improvement
+								</option>
+								<option value="search-toys-games">Toys & Games</option>
+								<option value="search-video-games">Video Games</option>
+								<option value="search-women-fashion">Women's Fashion</option>
+							</select>
+						</div>
+						<input
+							type="text"
+							name="inp-search"
+							id="inp-search"
+							placeholder="Search Amazon"
+							class="outline-none border-none pl-3 min-w-[100px] flex-1"
+						/>
+						<div
+							class="submit relative flex after-icon after:content-[''] after:justify-center rounded-e-md bg-amber-300 bg-amazonImage bg-seacrh-icon-position hover:bg-amber-400"
+						>
+							<input
+								type="submit"
+								value=""
+								class="border-none appearance-none relative h-full w-12 cursor-pointer"
+							/>
+						</div>
+					</form>
+				</div>
+
+				<!-- Region & Language -->
+				<div
+					class="region flex items-end h-[52px] p-2 text-white white-border relative"
+				>
+					<a href="#">
+						<div class="region-header flex relative pr-2 pb-1">
+							<div
+								class="flag w-5 h-4 bg-flags bg-us-position mr-1 -mt-1"
+							></div>
+							<span class="lang font-bold leading-3">EN </span>
+							<div
+								class="absolute border-transparent border-t-lightText border-4 w-0 h-0 left-12 bottom-0"
+							></div>
+						</div>
+
+						<div
+							class="region-menu hidden absolute top-full -left-[2px] bg-white text-zinc-600 text-sm p-4 w-[240px] h-fit border border-lightText rounded transition-all duration-300 ease-linear"
+						>
+							<div
+								class="absolute border-transparent border-b-white border-8 w-0 h-0 left-[53px] -top-4"
+							></div>
+							<div class="flex gap-3 text-xs pb-2">
+								<span>Change language</span>
+								<a href="#" class="text-cyan-800 text-xs">Learn more</a>
+							</div>
+							<div
+								class="lang-choices pb-3 flex flex-col border-b border-lightText"
+							>
+								<label
+									for="En"
+									class="p-2 pl-6 cursor-pointer border-b border-lightText"
+									><input type="radio" name="language" id="En" />
+									<div class="relative"></div>
+									<a href="#">English - EN</a></label
+								>
+								<label for="ES" class="p-2 pl-6 cursor-pointer"
+									><input type="radio" name="language" id="ES" />
+									<div class="relative"></div>
+									<a href="#">español - ES</a></label
+								>
+								<label for="AR" class="p-2 pl-6 cursor-pointer"
+									><input type="radio" name="language" id="AR" />
+									<div class="relative"></div>
+									<a href="#">العربية - AR</a></label
+								>
+								<label for="DE" class="p-2 pl-6 cursor-pointer"
+									><input type="radio" name="language" id="DE" />
+									<div class="relative"></div>
+									<a href="#">Deutsch - DE</a></label
+								>
+								<label for="KO" class="p-2 pl-6 cursor-pointer"
+									><input type="radio" name="language" id="KO" />
+									<div class="relative"></div>
+									<a href="#">한국어 - KO</a></label
+								>
+								<label for="PT" class="p-2 pl-6 cursor-pointer"
+									><input type="radio" name="language" id="PT" />
+									<div class="relative"></div>
+									<a href="#">português - PT</a>
+								</label>
+								<label for="ZH" class="p-2 pl-6 cursor-pointer"
+									><input type="radio" name="language" id="ZH" />
+									<div class="relative"></div>
+									<a href="#">中文 (简体) - ZH</a></label
+								>
+							</div>
+
+							<span class="flex gap-3 mt-5 text-xs pb-2"
+								>Change currency
+								<a href="#" class="text-cyan-800">Learn more</a></span
+							>
+							<div
+								class="change-currency pb-3 flex justify-between border-b border-lightText"
+							>
+								<span>$ - USD - US Dollar</span>
+								<a href="#" class="text-cyan-800">Change</a>
+							</div>
+							<div class="change-region mt-5 flex flex-col">
+								<div class="flex items-center">
+									<div class="flag w-5 h-4 bg-flags bg-us-position mr-1"></div>
+									You are shopping on
+								</div>
+								<span>Amazon.com</span>
+								<a href="#" class="mt-3 self-center text-cyan-700"
+									>Change country/region.</a
+								>
+							</div>
+						</div>
+						<!-- </div> -->
+					</a>
+				</div>
+
+				<!-- Sign In -->
+				<div
+					class="sign-in flex gap-1 items-end h-[52px] p-2 text-white white-border mr-1 relative"
+				>
+					<a href="#">
+						<div class="sign-in-header flex">
+							<div class="flex flex-col justify-end relative pr-3">
+								<span class="text-xs text-lightText">Hello, sign in</span>
+								<span class="text-[14px] font-bold leading-tight">
+									Account & Lists
+								</span>
+								<div
+									class="absolute border-transparent border-t-lightText border-4 w-0 h-0 left-[106px] bottom-0"
+								></div>
+							</div>
+						</div>
+					</a>
+
+					<div
+						class="sign-in-menu hidden absolute top-full -left-[200px] bg-white text-zinc-600 text-sm p-4 w-[460px] h-fit border border-lightText rounded transition-all duration-300 ease-linear"
+					>
+						<div
+							class="absolute border-transparent border-b-white border-8 w-0 h-0 left-[311px] -top-4"
+						></div>
+						<div class="flex flex-col items-center">
+							<a
+								href="#"
+								class="rounded-md bg-amber-300 px-16 py-2 w-fit hover:underline"
+								>Sign in</a
+							>
+							<div
+								class="w-full p-2 mb-2 text-xs text-center border-b border-zinc-100 border-1"
+							>
+								New customer?
+								<a href="#" class="text-cyan-800">Start here.</a>
+							</div>
+
+							<div class="flex w-full mt-2 text-sm leading-6">
+								<ul class="basis-1/2 mx-2 border-r border-zinc-100">
+									<h4 class="font-bold text-lg pb-1">Your Lists</h4>
+									<li><a href="#"> Create a List </a></li>
+									<li><a href="#"> Find a List or Registry </a></li>
+								</ul>
+
+								<ul class="basis-1/2 mx-2">
+									<h4 class="font-bold text-lg pb-1">Your Account</h4>
+									<li><a href="#"> Account </a></li>
+									<li><a href="#"> Orders </a></li>
+									<li><a href="#"> Recommendations </a></li>
+									<li><a href="#"> Browsing History </a></li>
+									<li><a href="#"> Watchlist </a></li>
+									<li><a href="#"> Video Purchases & Rentals </a></li>
+									<li><a href="#"> Kindle Unlimited </a></li>
+									<li><a href="#"> Content & Devices </a></li>
+									<li><a href="#"> Subscribe & Save Items </a></li>
+									<li><a href="#"> Memberships & Subscriptions </a></li>
+									<li><a href="#"> Music Library </a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Orders -->
+				<div
+					class="orders flex gap-1 items-end h-[52px] p-2 text-white white-border mr-1 cursor-pointer"
+				>
+					<div class="flex flex-col justify-end">
+						<span class="text-xs text-lightText">Returns</span>
+						<span class="text-[14px] font-bold leading-tight"> & Orders </span>
+					</div>
+				</div>
+
+				<!-- Cart -->
+				<div
+					class="cart h-[52px] w-[52px] bg-amazonBlue bg-amazonImage bg-no-repeat bg-cart-position white-border pl-[22px] pt-1 cursor-pointer"
+				>
+					<span
+						id="cart-items"
+						class="cart-items text-lg font-bold text-amazonYellow"
+						>0</span
+					>
+				</div>
+			</div>
+
+			<div
+				class="nav-bottom p-0 flex items-center bg-amazonLight text-white relative"
+			>
+				<div
+					class="menu-btn flex gap-0 h-fit items-center font-bold white-border py-2 px-3 cursor-pointer"
+				>
+					<div
+						class="menu-bars-icon h-6 w-6 bg-amazonLight bg-amazonImage bg-no-repeat bg-menu-bars-position"
+					></div>
+					<span class="text-slate-100">All</span>
+				</div>
+
+				<ul class="nav-bar flex text-sm">
+					<li class="white-border py-2 px-3">
+						<a href="#" class="">Today's Deals</a>
+					</li>
+					<li class="white-border py-2 px-3">
+						<a href="#" class="">Customer Services</a>
+					</li>
+					<li class="white-border py-2 px-3">
+						<a href="#" class="">Registry</a>
+					</li>
+					<li class="white-border py-2 px-3">
+						<a href="#" class="">Gift Cards</a>
+					</li>
+					<li class="white-border py-2 px-3">
+						<a href="#" class="">Sell</a>
+					</li>
+				</ul>
+			</div>
+			<!-- </div> -->
+		</header>
+		<main
+			class="max-w-[1400px] min-w-[1000px] h-fit bg-slate-400 relative mx-auto"
+		>
+			<!-- Banner -->
+			<section class="banner relative h-[600px] overflow-hidden">
+				<div
+					id="banner-nav-left"
+					class="banner-nav-left flex justify-center items-center w-[70px] min-h-[200px] absolute top-0 left-0 border-2 border-transparent hover:border-white hover:rounded-md cursor-pointer z-[15]"
+				>
+					<div
+						class="left-slide-banner bg-icons bg-large-left-arrow w-[30px] h-[52px] scale-75"
+					></div>
+				</div>
+
+				<div id="banner-slider" class="banner-slider relative flex z-0">
+					<!-- <div class="flex overflow-hidden"> -->
+					<a
+						id="banner-1"
+						href="#"
+						class="h-[600px] w-full transition-all duration-300 ease-linear absolute top-0 current"
+					>
+						<div
+							class="w-full h-full bg-banner-1 bg-no-repeat bg-cover bg-left-top"
+						></div>
+					</a>
+					<a
+						id="banner-2"
+						href="#"
+						class="h-[600px] transition-all duration-300 ease-linear absolute top-0 next"
+					>
+						<div
+							class="w-full h-full bg-banner-2 bg-no-repeat bg-cover bg-left-top"
+						></div>
+					</a>
+					<a
+						id="banner-3"
+						href="#"
+						class="h-[600px] transition-all duration-300 ease-linear absolute top-0 next"
+					>
+						<div
+							class="w-full h-full bg-banner-3 bg-no-repeat bg-cover bg-left-top"
+						></div>
+					</a>
+					<a
+						id="banner-4"
+						href="#"
+						class="h-[600px] transition-all duration-300 ease-linear absolute top-0 next"
+					>
+						<div
+							class="w-full h-full bg-banner-4 bg-no-repeat bg-cover bg-left-top"
+						></div>
+					</a>
+					<a
+						id="banner-5"
+						href="#"
+						class="h-[600px] transition-all duration-300 ease-linear absolute top-0 next"
+					>
+						<div
+							class="w-full h-full bg-banner-5 bg-no-repeat bg-cover bg-left-top"
+						></div>
+					</a>
+					<a
+						id="banner-6"
+						href="#"
+						class="h-[600px] transition-all duration-300 ease-linear absolute top-0 next"
+					>
+						<div
+							class="w-full h-full bg-banner-6 bg-no-repeat bg-cover bg-left-top"
+						></div>
+					</a>
+					<a
+						id="banner-7"
+						href="#"
+						class="h-[600px] transition-all duration-300 ease-linear absolute top-0"
+					>
+						<div
+							class="w-full h-full bg-banner-7 bg-no-repeat bg-cover bg-left-top"
+						></div>
+					</a>
+				</div>
+
+				<div
+					id="banner-nav-right"
+					class="banner-nav-left flex justify-center items-center w-[70px] min-h-[200px] absolute top-0 right-0 border-2 border-transparent hover:border-white hover:rounded-md cursor-pointer z-[15]"
+				>
+					<div
+						class="right-slide-banner bg-icons bg-large-right-arrow w-[30px] h-[52px] scale-75"
+					></div>
+				</div>
+				<div
+					class="bg-gradient-banner w-full h-3/4 absolute bottom-0 left-0"
+				></div>
+			</section>
+			<div class="absolute flex flex-col top-52 w-full h-fit">
+				<!-- Department Section -->
+				<section
+					id="section-departments"
+					class="px-6 mb-6 grid grid-cols-300 gap-6 w-full h-fit text-xs"
+				>
+					<article
+						class="bg-white p-6 flex flex-col justify-between gap-4 h-[400px]"
+					>
+						<h2 class="text-xl font-bold">Gaming accessories</h2>
+						<div class="grid grid-cols-2 gap-3">
+							<div>
+								<a href="#">
+									<div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-1-1.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Headsets</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-1-2.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Keyboard</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-1-3.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Computer mice</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-1-4.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Chairs</span>
+								</a>
+							</div>
+						</div>
+						<a href="#" class="text-cyan-800">See more</a>
+					</article>
+					<article
+						class="bg-white p-6 flex flex-col justify-between gap-4 h-[400px]"
+					>
+						<h2 class="text-xl font-bold">Toys Under $30</h2>
+						<div>
+							<a href="#"
+								><div
+									class="h-[280px] relative flex justify-center overflow-hidden"
+								>
+									<img
+										class="absolute h-full min-w-max"
+										src="../assets/images/home-2.jpg"
+										alt=""
+									/>
+								</div>
+							</a>
+						</div>
+						<a href="#" class="text-cyan-800">Shop now</a>
+					</article>
+					<article
+						class="bg-white p-6 flex flex-col justify-between gap-4 h-[400px]"
+					>
+						<h2 class="text-xl font-bold">Home & Kitchen Under $30</h2>
+						<div>
+							<a href="#"
+								><div
+									class="h-[280px] relative flex justify-center overflow-hidden"
+								>
+									<img
+										class="absolute h-full min-w-max"
+										src="../assets/images/home-3.jpg"
+										alt=""
+									/></div
+							></a>
+						</div>
+						<a href="#" class="text-cyan-800">Shop now</a>
+					</article>
+					<article
+						class="bg-white p-6 flex flex-col justify-between gap-4 h-[400px]"
+					>
+						<h2 class="text-xl font-bold">Shop school essentials</h2>
+						<div>
+							<a href="#"
+								><div
+									class="h-[280px] relative flex justify-center overflow-hidden"
+								>
+									<img
+										class="absolute h-full min-w-max"
+										src="../assets/images/home-4.jpg"
+										alt=""
+									/></div
+							></a>
+						</div>
+						<a href="#" class="text-cyan-800">See more</a>
+					</article>
+					<article
+						class="bg-white p-6 flex flex-col justify-between gap-4 h-[400px]"
+					>
+						<h2 class="text-xl font-bold">Health & Personal Care</h2>
+						<div>
+							<a href="#"
+								><div
+									class="h-[280px] relative flex justify-center overflow-hidden"
+								>
+									<img
+										class="absolute h-full min-w-max"
+										src="../assets/images/home-5.jpg"
+										alt=""
+									/></div
+							></a>
+						</div>
+						<a href="#" class="text-cyan-800">Shop now</a>
+					</article>
+					<article
+						class="bg-white p-6 flex flex-col justify-between gap-4 h-[400px]"
+					>
+						<h2 class="text-xl font-bold">Shop deals in Fashion</h2>
+						<div class="grid grid-cols-2 gap-3">
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-6-1.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Jeans under $50</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-6-2.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Tops under $25</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-6-3.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Dresses under $30</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-6-4.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Shoes under $50</span>
+								</a>
+							</div>
+						</div>
+						<a href="#" class="text-cyan-800">See all deals</a>
+					</article>
+					<article
+						class="bg-white p-6 flex flex-col justify-between gap-4 h-[400px]"
+					>
+						<h2 class="text-xl font-bold">Top Deal</h2>
+						<div>
+							<a href="#" class="flex flex-col items-start"
+								><div class="self-center">
+									<img src="../assets/images/home-7.jpg" alt="" />
+								</div>
+								<div class="deal-tag mb-2 font-bold">
+									<span class="bg-red-700 text-white p-1 mr-2">
+										Up to <span id="deal-percentage">40%</span> off
+									</span>
+									<span class="text-red-700">Top deal</span>
+								</div>
+								<span id="deal-of-day">Ultra Game NFL Apparel</span></a
+							>
+						</div>
+						<a href="#" class="text-cyan-800">See all deals</a>
+					</article>
+					<article
+						class="bg-white p-6 flex flex-col justify-between gap-4 h-[400px]"
+					>
+						<h2 class="text-xl font-bold">Refresh your space</h2>
+						<div class="grid grid-cols-2 gap-3">
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-8-1.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Dining</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-8-2.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Home</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-8-3.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Kitchen</span></a
+								>
+							</div>
+							<div>
+								<a href="#"
+									><div
+										class="h-[120px] relative flex justify-center overflow-hidden"
+									>
+										<img
+											class="absolute h-full min-w-max"
+											src="../assets/images/home-8-4.jpg"
+											alt=""
+										/>
+									</div>
+									<span>Health and beauty</span>
+								</a>
+							</div>
+						</div>
+						<a href="#" class="text-cyan-800">See more</a>
+					</article>
+					<article class="bg-white p-6 flex flex-col gap-4 h-[400px]">
+						<h2 class="text-xl font-bold">Dresses</h2>
+						<div>
+							<a href="#"
+								><div
+									class="h-[280px] relative flex justify-center overflow-hidden"
+								>
+									<img
+										class="absolute h-full min-w-max"
+										src="../assets/images/home-9.jpg"
+										alt=""
+									/></div
+							></a>
+						</div>
+						<a href="#" class="text-cyan-800">Shop now</a>
+					</article>
+				</section>
+
+				<!-- Exciting Deals Section -->
+				<section id="exciting-deals-section" class="deals-container px-6 mb-6">
+					<div class="section-header flex items-center gap-4 p-6 pb-2 bg-white">
+						<h2 class="text-xl font-bold">Today's deals</h2>
+						<a href="#" class="text-cyan-800">See all deals</a>
+					</div>
+					<div
+						class="deals-container relative px-6 pb-4 bg-white text-xs overflow-hidden"
+					>
+						<div
+							class="deals slider flex gap-2 w-full h-[320px] pb-4 custom-scrollbar overflow-x-scroll scroll-smooth transition-all duration-600 overflow-hidden"
+						>
+							<!-- Left Slide Icon -->
+							<div
+								id="left-slide-one"
+								class="slide-icon-container left-slide flex justify-start items-center top-20 left-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-e-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="left-slide-icon bg-icons bg-small-left-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Right Slide Icon -->
+							<div
+								id="right-slide-one"
+								class="slide-icon-container right-slide flex items-center justify-end top-20 right-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-s-md shadow-boxShadow1 pointer-events-none"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="right-slide-icon bg-icons bg-small-right-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Products -->
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-1.jpg"
+											alt="Garmin inReach® Messenger Handheld Satellite Communicator,
+									Global Two-Way Messaging"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">17</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>249.99
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>299.99</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Garmin inReach® Messenger Handheld Satellite Communicator,
+										Global Two-Way Messaging
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-2.jpg"
+											alt="No Time to Panic: How I
+									Curbed My Anxiety and Conquered a Lifetime of Panic Attacks"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">34</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>18.36
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>28.00</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										No Time to Panic: How I Curbed My Anxiety and Conquered a
+										Lifetime of Panic Attacks
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-3.jpg"
+											alt="Amazon Basics Side Press Wringer Combo Commercial Rectangular Mop
+										Bucket on Wheels, 35-Quart, Yellow "
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">17</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>65.99
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>79.48</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Amazon Basics Side Press Wringer Combo Commercial
+										Rectangular Mop Bucket on Wheels, 35-Quart, Yellow
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-4.jpg"
+											alt="Amazon Basics Side Press Wringer Combo Commercial Rectangular Mop
+										Bucket on Wheels, 35-Quart, Yellow "
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">20</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>21.56
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>27.00</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										The September House
+									</p>
+								</a>
+							</article>
+
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-5.jpg"
+											alt="Scotch-Brite Disposable Toilet Scrubber Starter Kit, Disposable Refills with Built-In Bleach Alternative, Includes 1 Handle, Storage Caddy and 5 Refills"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">30</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>10.56
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>14.99</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Scotch-Brite Disposable Toilet Scrubber Starter Kit,
+										Disposable Refills with Built-In Bleach Alternative,
+										Includes 1 Handle, Storage Caddy and 5 Refills
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-6.jpg"
+											alt="How to Draw Five Nights at
+										Freddy's: An AFK Book"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">24</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>9.81
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>12.99</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										How to Draw Five Nights at Freddy's: An AFK Book
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-7.jpg"
+											alt="CHI Vibes Wave On
+										Multifunctional Waver - Create Long-Lasting Frizz-Free, Crimp-Style
+										Waves and Loose Beachy Curls with One Tool for Any Hair Type"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">33</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>74.18
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>109.99</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										CHI Vibes Wave On Multifunctional Waver - Create
+										Long-Lasting Frizz-Free, Crimp-Style Waves and Loose Beachy
+										Curls with One Tool for Any Hair Type
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-10.jpg"
+											alt="Twin Peaks: The Television Collection [DVD]"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">18</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>41.75
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>50.99</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Twin Peaks: The Television Collection [DVD]
+									</p>
+								</a>
+							</article>
+
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-12.jpg"
+											alt="Funko Bitty Pop! Disney Princess Mini
+										Collectible Toys - Rapunzel, Merida, Moana & Mystery Chase Figure
+										(Styles May Vary) 4-Pack"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">30</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>10.49
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>14.99</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Funko Bitty Pop! Disney Princess Mini Collectible Toys -
+										Rapunzel, Merida, Moana & Mystery Chase Figure (Styles May
+										Vary) 4-Pack
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-13.jpg"
+											alt="Your Next Five Moves: Master the Art
+										of Business Strategy"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">23</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>21.46
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>28.00</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Your Next Five Moves: Master the Art of Business Strategy
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-14.jpg"
+											alt="BOSCH 50011486 QuietCast Premium Disc
+										Brake Rotor - Compatible With Select Lexus ES300h, ES350; Pontiac
+										Vibe; Scion tC; Toyota Camry, Corolla, Corolla iM, Matrix, RAV4;
+										FRONT - Single"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">42</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>69.08
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>119.99</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										BOSCH 50011486 QuietCast Premium Disc Brake Rotor -
+										Compatible With Select Lexus ES300h, ES350; Pontiac Vibe;
+										Scion tC; Toyota Camry, Corolla, Corolla iM, Matrix, RAV4;
+										FRONT - Single
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-15.jpg"
+											alt="Forney 70398 Binder Chain,
+									3/8-Inch-by-14-Feet"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">31</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>44.18
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>64.09</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Forney 70398 Binder Chain, 3/8-Inch-by-14-Feet
+									</p>
+								</a>
+							</article>
+
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-17.jpg"
+											alt="Our Way Home: Reimagining an
+										American Farmhouse
+				"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">42</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>37.81
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>65.00</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Our Way Home: Reimagining an American Farmhouse
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-deals-18.jpg"
+											alt="Web Design with HTML, CSS,
+										JavaScript and jQuery Set"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">38</span>% off
+										</span>
+										<span class="text-red-700">Deal</span>
+									</div>
+									<div class="text-zinc-700">
+										<sup class="text-sm">$</sup
+										><span id="deal-price" class="text-black text-lg"
+											>35.90
+										</span>
+										List price <sup>$</sup
+										><span id="deal-list-price" class="line-through"
+											>58.00</span
+										>
+									</div>
+									<p id="title" class="w-[250px] truncate">
+										Web Design with HTML, CSS, JavaScript and jQuery Set
+									</p>
+								</a>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<!-- Frequently Purchased Section -->
+				<section id="frequently-purchased-section" class="px-6 mb-6">
+					<div class="section-header flex items-center gap-4 p-6 pb-2 bg-white">
+						<h2 class="text-xl font-bold">Frequently repurchased in Home</h2>
+					</div>
+
+					<div
+						class="frequently-purchased-container relative px-6 pb-4 bg-white text-xs mb-6 overflow-hidden"
+					>
+						<div
+							class="frequently-purchased slider flex gap-2 w-full h-[220px] pb-4 custom-scrollbar overflow-x-scroll scroll-smooth transition-all duration-600 overflow-hidden"
+						>
+							<!-- Left Slide Icon -->
+							<div
+								id="left-slide-two"
+								class="slide-icon-container left-slide flex justify-start items-center top-10 left-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-e-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="left-slide-icon bg-icons bg-small-left-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Right Slide Icon -->
+							<div
+								id="right-slide-two"
+								class="slide-icon-container right-slide flex items-center justify-end top-10 right-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-s-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="right-slide-icon bg-icons bg-small-right-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Products -->
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-1.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-2.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-3.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-4.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-5.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-6.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-7.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-8.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-9.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-10.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-11.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-12.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-freq-13.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<!-- Shop The Store Section -->
+				<section id="shop-the-store-section" class="px-6 mb-6">
+					<div class="section-header flex items-center gap-4 p-6 pb-2 bg-white">
+						<h2 class="text-xl font-bold">Shop the store</h2>
+						<a href="#" class="text-cyan-800">Explore more</a>
+					</div>
+
+					<div
+						class="shop-the-store-container relative px-6 pb-4 bg-white text-xs mb-6 overflow-hidden"
+					>
+						<div
+							class="shop-the-store slider flex gap-2 w-full h-[220px] pb-4 custom-scrollbar overflow-x-scroll scroll-smooth transition-all duration-600 overflow-hidden"
+						>
+							<!-- Left Slide Icon -->
+							<div
+								id="left-slide-two"
+								class="slide-icon-container left-slide flex justify-start items-center top-10 left-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-e-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="left-slide-icon bg-icons bg-small-left-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Right Slide Icon -->
+							<div
+								id="right-slide-two"
+								class="slide-icon-container right-slide flex items-center justify-end top-10 right-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-s-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="right-slide-icon bg-icons bg-small-right-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Products -->
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-1.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-2.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-3.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-4.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-5.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-6.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-7.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-8.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopStore-9.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<!-- Men's Watches Section -->
+				<section id="men-watches-section" class="px-6 mb-6">
+					<div class="section-header flex items-center gap-4 p-6 pb-2 bg-white">
+						<h2 class="text-xl font-bold">
+							Men's watches | from 20% to 70% off
+						</h2>
+						<a href="#" class="text-cyan-800">See all</a>
+					</div>
+
+					<div
+						class="men-watches-container relative px-6 pb-4 bg-white text-xs mb-6 overflow-hidden"
+					>
+						<div
+							class="men-watches slider flex gap-2 w-full h-[220px] pb-4 custom-scrollbar overflow-x-scroll scroll-smooth transition-all duration-600 overflow-hidden"
+						>
+							<!-- Left Slide Icon -->
+							<div
+								id="left-slide-two"
+								class="slide-icon-container left-slide flex justify-start items-center top-10 left-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-e-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="left-slide-icon bg-icons bg-small-left-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Right Slide Icon -->
+							<div
+								id="right-slide-two"
+								class="slide-icon-container right-slide flex items-center justify-end top-10 right-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-s-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="right-slide-icon bg-icons bg-small-right-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Products -->
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-1.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-2.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-3.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-4.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-5.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-6.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-7.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-8.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-men-watches-9.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img
+											src="../assets/images/home-men-watches-10.jpg"
+											alt=""
+										/>
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img
+											src="../assets/images/home-men-watches-11.jpg"
+											alt=""
+										/>
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img
+											src="../assets/images/home-men-watches-12.jpg"
+											alt=""
+										/>
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img
+											src="../assets/images/home-men-watches-13.jpg"
+											alt=""
+										/>
+									</div>
+								</a>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<!-- Prime Deals Section -->
+				<section
+					id="prime-deals-section"
+					class="prime-deals-container px-6 mb-6"
+				>
+					<div class="section-header flex items-center gap-4 p-6 pb-2 bg-white">
+						<h2 class="text-xl font-bold">
+							Prime deals | Electronics | Up to 40% off
+						</h2>
+						<a href="#" class="text-cyan-800">0%* installments | Top brands</a>
+					</div>
+					<div
+						class="prime-deal-container relative px-6 pb-4 bg-white text-xs overflow-hidden"
+					>
+						<div
+							class="prime-deal slider flex gap-2 w-full h-[320px] pb-4 custom-scrollbar overflow-x-scroll scroll-smooth transition-all duration-600 overflow-hidden"
+						>
+							<!-- Left Slide Icon -->
+							<div
+								id="left-slide-one"
+								class="slide-icon-container left-slide flex justify-start items-center top-20 left-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-e-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="left-slide-icon bg-icons bg-small-left-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Right Slide Icon -->
+							<div
+								id="right-slide-one"
+								class="slide-icon-container right-slide flex items-center justify-end top-20 right-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-s-md shadow-boxShadow1 pointer-events-none"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="right-slide-icon bg-icons bg-small-right-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Products -->
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-1.jpg"
+											alt="Save on Amazon Basics Batteries and Electronic accessories"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">25</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on Amazon Basics Batteries and Electronic accessories
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-2.jpg"
+											alt="Save on UGREEN Electronic Accessories"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">35</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on UGREEN Electronic Accessories
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-3.jpg"
+											alt="Save on Sony Audio"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">40</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on Sony Audio
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-4.jpg"
+											alt="Save on HyperX headphones & microphones"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">47</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on HyperX headphones & microphones
+									</p>
+								</a>
+							</article>
+
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-5.jpg"
+											alt="Save on Monitors"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">55</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">Save on Monitors</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-6.jpg"
+											alt="Save on Amazon Basics Home and Home Improvement"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											SAR<span id="deal-percentage">349 </span>and under
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on Amazon Basics Home and Home Improvement
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-7.jpg"
+											alt="Save on selection of Ring Home Security Devices"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">47</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on selection of Ring Home Security Devices
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-8.jpg"
+											alt="Save on Anker entertainment products"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">45</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on Anker entertainment products
+									</p>
+								</a>
+							</article>
+
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-9.jpg"
+											alt="Save on compatible cables, charging devices and electronic accessories"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">26</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on compatible cables, charging devices and electronic
+										accessories
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-10.jpg"
+											alt="Save on Amazon Basics Luggage and Travel Accessories"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">25</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on Amazon Basics Luggage and Travel Accessories
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-11.jpg"
+											alt="Save on Amazon Basics Pets, Sports and Furniture"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">4</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on Amazon Basics Pets, Sports and Furniture
+									</p>
+								</a>
+							</article>
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-12.jpg"
+											alt="Save on Anker Charging Aceessories"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">34</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on Anker Charging Aceessories
+									</p>
+								</a>
+							</article>
+
+							<article
+								class="py-b flex flex-col gap-4 w-fit h-[300px] bg-white"
+							>
+								<a href="#" class="flex flex-col items-start">
+									<div
+										class="w-[250px] h-[220px] flex justify-center p-2 mb-4 relative after:absolute after:bg-zinc-600 after:opacity-5 after:w-full after:h-full after:top-0 after:rounded-lg"
+									>
+										<img
+											src="../assets/images/home-prime-electronics-13.jpg"
+											alt="Save on Bose headphones and speakers"
+										/>
+									</div>
+									<div class="deal-tag mb-2 font-bold">
+										<span class="bg-red-700 text-white p-1 mr-2">
+											Up to <span id="deal-percentage">39</span>% off
+										</span>
+										<span class="text-red-700">Ramadan Deal</span>
+									</div>
+
+									<p id="title" class="w-[250px] truncate">
+										Save on Bose headphones and speakers
+									</p>
+								</a>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<!-- Shop On Amazon Section -->
+				<section id="shop-on-amazon-section" class="px-6 mb-6">
+					<div class="section-header flex items-center gap-4 p-6 pb-2 bg-white">
+						<h2 class="text-xl font-bold">Shop on Amazon</h2>
+					</div>
+
+					<div
+						class="shop-on-amazon-container relative px-6 pb-4 bg-white text-xs mb-6 overflow-hidden"
+					>
+						<div
+							class="shop-on-amazon slider flex gap-2 w-full h-[220px] pb-4 custom-scrollbar overflow-x-scroll scroll-smooth transition-all duration-600 overflow-hidden"
+						>
+							<!-- Left Slide Icon -->
+							<div
+								id="left-slide-two"
+								class="slide-icon-container left-slide flex justify-start items-center top-10 left-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-e-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="left-slide-icon bg-icons bg-small-left-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Right Slide Icon -->
+							<div
+								id="right-slide-two"
+								class="slide-icon-container right-slide flex items-center justify-end top-10 right-6 absolute w-[60px] h-[120px] overflow-hidden opacity-0 transition-all duration-500 z-[15] cursor-pointer"
+							>
+								<div
+									class="-left-2 group w-[45px] h-[100px] p-[1px] bg-white rounded-s-md shadow-boxShadow1"
+								>
+									<div
+										class="w-full h-full rounded-md flex justify-center items-center group-active:border-2 group-active:border-cyan-600"
+									>
+										<div
+											class="right-slide-icon bg-icons bg-small-right-arrow w-[15px] h-[22px] opacity-60 group-hover:opacity-100"
+										></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Products -->
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-1.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-2.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-3.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-4.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-5.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-6.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-7.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-8.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+							<article class="py-b w-fit h-[200px] bg-white">
+								<a href="#" class="">
+									<div class="flex justify-center relative w-[200px] h-[200px]">
+										<img src="../assets/images/home-shopAmazon-9.jpg" alt="" />
+									</div>
+								</a>
+							</article>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<script src="./main.js"></script>
+	</body>
+</html>
