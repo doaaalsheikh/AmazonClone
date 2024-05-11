@@ -52,13 +52,13 @@
 		@apply hover:underline hover:text-orange-600;
 	}
 	.current {
-		@apply left-0 w-screen;
+		@apply left-0 w-full;
 	}
 	.previous {
-		@apply -left-full w-screen;
+		@apply -left-full w-full;
 	}
 	.next {
-		@apply left-full w-screen;
+		@apply left-full w-full;
 	}
 
 	/* Custom scrollbar styles */

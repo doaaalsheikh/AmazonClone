@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const menuBtn = document.querySelector(".menu-btn");
+	const header = document.querySelector(".header");
 	const sideMenuContainer = document.querySelector(".side-menu-container");
 	const sideMenu = document.querySelector(".side-menu");
 	// const sideMenu = document.querySelector(".side-menu");
@@ -7,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const subMenu = document.querySelector(".sub-menu");
 	const overlay = document.querySelector(".overlay");
 	const closeBtn = document.querySelector(".close");
+	const navContainer = document.querySelector(".nav-container");
 	const navTop = document.querySelector(".nav-top");
 	const navBottom = document.querySelector(".nav-bottom");
 	const region = document.querySelector(".region");
@@ -239,17 +241,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		console.log("blured");
 		overlay.style.zIndex = -1;
 		overlay.style.opacity = 0;
-		closeBtn.style.zIndex = -1;
+		closeBtn.style.position = "absolute"
 		sideMenuContainer.style.width = "0";
 		sideMenuContainer.style.left = "calc( -50% - 50px)";
-		document.body.style.overflow = "scroll";
 	};
 
 	let navHeaderHover = function () {
+		navContainer.style.position="fixed";
+		navContainer.style.zIndex = 50;
+		overlay.style.position="fixed";
 		overlay.style.zIndex = 40;
 		overlay.style.opacity = 0.5;
-		navTop.style.zIndex = 50;
-		navBottom.style.zIndex = 45;
 	};
 
 	let adjustGrid = function () {
@@ -295,6 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		regionMenu.style.display = "block";
 	});
 	region.addEventListener("mouseleave", () => {
+		overlay.style.position="absolute";
 		overlay.style.zIndex = -1;
 		overlay.style.opacity = 0;
 		regionMenu.style.display = "none";
@@ -306,6 +309,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		signInMenu.style.display = "block";
 	});
 	signIn.addEventListener("mouseleave", () => {
+		overlay.style.position="absolute";
 		overlay.style.zIndex = -1;
 		overlay.style.opacity = 0;
 		signInMenu.style.display = "none";
@@ -318,10 +322,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		mainMenu.innerHTML = "";
 		sideMenuContainer.style.left = "0";
 		sideMenuContainer.style.width = "350px";
-		closeBtn.style.zIndex = 150;
+		sideMenuContainer.style.position="fixed";
+		closeBtn.style.position="fixed";
+		overlay.style.position="fixed";
+		overlay.style.opacity = 0.5;
 		overlay.style.zIndex = 60;
-		overlay.style.opacity = 0.7;
-		document.body.style.overflow = "hidden";
 		sideMenu.style.overflowY = "scroll";
 		sideMenu.style.overflowX = "hidden";
 		sideMenu.style.height = "calc(100% - 52px)";
